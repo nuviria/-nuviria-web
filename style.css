@@ -644,40 +644,37 @@ body {
   
   
   
-  /* ==========================
-   DESKTOP HEADER FIX (robusto)
+/* ==========================
+   DESKTOP HEADER FIX (centrado matemático)
 ========================== */
 @media (min-width: 1024px) {
 
-  /* Header a ancho completo y con grid */
   .header-inner {
     max-width: none;
     margin: 0;
     height: 80px;
     padding: 0 20px; /* ~5mm */
     display: grid;
-    grid-template-columns: auto 1fr auto; /* logo | centro | spacer */
+    grid-template-columns: max-content 1fr max-content; /* logo | centro | copia logo */
     align-items: center;
   }
 
-  /* Logo bien a la izquierda */
+  /* Logo izquierda */
   .logo-container {
     justify-self: start;
   }
 
-  /* Nav centrado real */
+  /* Nav centrado REAL */
   .navbar {
-    position: static;      /* 🔥 clave */
+    position: static;
     top: auto;
     height: auto;
     background: transparent;
-    justify-self: center;  /* 🔥 clave */
+    justify-self: center;
   }
 
-  /* Lista centrada */
   .nav-list {
     margin: 0;
-    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -688,5 +685,30 @@ body {
   .nav-list a {
     font-size: 0.9rem;
     white-space: nowrap;
+  }
+
+  /* ✅ spacer copia el ancho del logo para que el centro sea exacto */
+  .header-spacer {
+    justify-self: end;
+    visibility: hidden; /* ocupa espacio pero no se ve */
+  }
+
+  /* copiamos el contenido del logo para igualar ancho */
+  .header-spacer::before {
+    content: "NUVIRIA"; /* texto aproximado (se ajusta con padding) */
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding-left: 12px; /* compensa el gap del logo */
+  }
+
+  /* copiamos también el espacio del icono */
+  .header-spacer::after {
+    content: "";
+    display: inline-block;
+    width: 48px;  /* icono */
+    height: 48px;
+    margin-right: 12px; /* gap */
   }
 }

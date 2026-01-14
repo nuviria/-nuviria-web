@@ -10,10 +10,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./image/favicon/favicon-32x32.png">
   <link rel="apple-touch-icon" href="./image/favicon/apple-touch-icon.png">
 
-  <!-- Optimización CDNs -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-
-  <!-- Estilos -->
   <link rel="stylesheet" href="./style.css">
 
   <!-- Swiper -->
@@ -22,17 +19,20 @@
 
 <body>
 
-  <!-- HEADER + NAV (MISMO BLOQUE) -->
+  <!-- HEADER + NAV -->
   <header class="site-header" id="top">
     <div class="header-inner">
+
       <div class="logo-container">
         <a href="#top" aria-label="Ir al inicio">
-          <img src="./image/nuviria-logo-dark.png" alt="Nuviria">
+          <!-- logo desktop -->
+          <img class="logo-desktop" src="./image/nuviria-logo-dark.png" alt="Nuviria" />
+          <!-- logo mobile (cambiá el path si tu isologo tiene otro nombre) -->
+          <img class="logo-mobile" src="./image/nuviria-logo-dark.png" alt="Nuviria" />
           <span class="logo-text">nuviria</span>
         </a>
       </div>
 
-      <!-- NAV (una sola línea, también en mobile) -->
       <nav class="navbar" aria-label="Navegación principal">
         <ul class="nav-list">
           <li><a href="#top">Inicio</a></li>
@@ -41,6 +41,7 @@
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
+
     </div>
   </header>
 
@@ -154,12 +155,10 @@
 
   </main>
 
-  <!-- SCRIPTS -->
+  <!-- Swiper -->
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-
   <script defer>
     document.addEventListener("DOMContentLoaded", () => {
-      // SWIPER
       new Swiper(".mySwiper", {
         loop: true,
         speed: 800,
@@ -167,7 +166,7 @@
         pagination: { el: ".swiper-pagination", clickable: true }
       });
 
-      // OCULTAR NAV AL SCROLLEAR (mobile + desktop si querés, lo limitamos con CSS)
+      // Ocultar header al scrollear (solo se aplicará en mobile via CSS)
       const header = document.querySelector(".site-header");
       let lastY = window.scrollY;
 
@@ -175,7 +174,6 @@
         const y = window.scrollY;
         const goingDown = y > lastY;
 
-        // umbral para evitar parpadeo
         if (y > 60 && goingDown) header.classList.add("nav-hidden");
         else header.classList.remove("nav-hidden");
 
@@ -183,7 +181,5 @@
       }, { passive: true });
     });
   </script>
-
 </body>
 </html>
-

@@ -6,15 +6,14 @@
   <title>Nuviria | Studio</title>
 
   <!-- Favicons -->
-  <link rel="icon" href="./image/favicon/favicon.ico">
+  <link rel="icon" href="./image/favicon/favicon.ico" type="image/x-icon">
   <link rel="icon" type="image/png" sizes="32x32" href="./image/favicon/favicon-32x32.png">
   <link rel="apple-touch-icon" href="./image/favicon/apple-touch-icon.png">
 
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css" />
 
   <!-- Swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
 </head>
 
 <body>
@@ -23,16 +22,20 @@
   <header class="site-header" id="top">
     <div class="header-inner">
 
+      <!-- LOGO -->
       <div class="logo-container">
         <a href="#top" aria-label="Ir al inicio">
-          <!-- logo desktop -->
-          <img class="logo-desktop" src="./image/nuviria-logo-dark.png" alt="Nuviria" />
-          <!-- logo mobile (cambiá el path si tu isologo tiene otro nombre) -->
-          <img class="logo-mobile" src="./image/nuviria-logo-dark.png" alt="Nuviria" />
+          <picture>
+            <!-- LOGO MOBILE (cambiá el nombre si tu archivo es otro) -->
+            <source media="(max-width: 1023px)" srcset="./image/isologo-nuviria.png">
+            <!-- LOGO DESKTOP -->
+            <img class="logo-img" src="./image/nuviria-logo-dark.png" alt="Nuviria">
+          </picture>
           <span class="logo-text">nuviria</span>
         </a>
       </div>
 
+      <!-- MENU -->
       <nav class="navbar" aria-label="Navegación principal">
         <ul class="nav-list">
           <li><a href="#top">Inicio</a></li>
@@ -46,6 +49,7 @@
   </header>
 
   <main>
+
     <!-- HERO -->
     <section class="hero">
       <div class="swiper mySwiper">
@@ -163,23 +167,10 @@
         loop: true,
         speed: 800,
         autoplay: { delay: 4500, disableOnInteraction: false },
-        pagination: { el: ".swiper-pagination", clickable: true }
+        pagination: { el: ".swiper-pagination", clickable: true },
       });
-
-      // Ocultar header al scrollear (solo se aplicará en mobile via CSS)
-      const header = document.querySelector(".site-header");
-      let lastY = window.scrollY;
-
-      window.addEventListener("scroll", () => {
-        const y = window.scrollY;
-        const goingDown = y > lastY;
-
-        if (y > 60 && goingDown) header.classList.add("nav-hidden");
-        else header.classList.remove("nav-hidden");
-
-        lastY = y;
-      }, { passive: true });
     });
   </script>
+
 </body>
 </html>

@@ -1,4 +1,3 @@
-<!-- index.html (COMPLETO) -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,358 +5,137 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nuviria | Studio</title>
 
-  <!-- Favicon clásico -->
-  <link rel="icon" href="./image/favicon/favicon.ico" type="image/x-icon">
-
-  <!-- PNGs estándar -->
-  <link rel="icon" type="image/png" sizes="16x16" href="./image/favicon/favicon-16x16.png">
+  <!-- Favicons -->
+  <link rel="icon" href="./image/favicon/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="./image/favicon/favicon-32x32.png">
-
-  <!-- Apple -->
-  <link rel="apple-touch-icon" sizes="180x180" href="./image/favicon/apple-touch-icon.png">
-
-  <!-- Android / PWA -->
-  <link rel="icon" type="image/png" sizes="192x192" href="./image/favicon/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="./image/favicon/android-chrome-512x512.png">
+  <link rel="apple-touch-icon" href="./image/favicon/apple-touch-icon.png">
 
   <!-- Optimización CDNs -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://cdn.boxicons.com" crossorigin>
 
-  <link rel="stylesheet" href="./style.css" />
+  <!-- Estilos -->
+  <link rel="stylesheet" href="./style.css">
 
-  <!-- BOXICONS -->
+  <!-- Iconos -->
   <link href="https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css" rel="stylesheet">
 
-  <!-- SWIPER (v12 unificado) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
 </head>
 
 <body>
 
-  <!-- HEADER + NAVBAR -->
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="logo-container">
-        <a href="#">
-          <img src="./image/nuviria-logo-dark.png" alt="Logo" />
-          <span class="logo-text">nuviria</span>
-        </a>
-      </div>
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
 
-      <!-- BOTÓN MENÚ (mobile) -->
-      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
-        <i class="bx bx-menu"></i>
-      </button>
+    <div class="logo-container">
+      <a href="#">
+        <img src="./image/nuviria-logo-dark.png" alt="Nuviria">
+        <span class="logo-text">nuviria</span>
+      </a>
     </div>
-  </header>
 
-  <!-- NAV (DESKTOP HORIZONTAL) -->
-  <nav class="navbar" aria-label="Navegación principal">
-    <ul class="nav-list">
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
+    <!-- Botón mobile -->
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <i class="bx bx-menu"></i>
+    </button>
 
-  <!-- NAV DRAWER (MOBILE) -->
-  <nav class="nav-drawer" aria-label="Menú móvil">
-    <ul class="nav-list">
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
+  </div>
+</header>
 
-  <!-- OVERLAY -->
-  <div class="nav-overlay" aria-hidden="true"></div>
+<!-- NAV DESKTOP -->
+<nav class="navbar">
+  <ul class="nav-list">
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
 
-  <main>
-    <!-- HERO-START -->
-    <section class="hero">
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
+<!-- NAV MOBILE (DRAWER) -->
+<nav class="nav-drawer">
+  <ul class="nav-list">
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
 
-          <!-- CARD-1 -->
-          <div class="swiper-slide slide-1">
-            <div class="hero-inner">
-              <div class="hero-deck">
-                <h1>Hacemos tus ideas realidad</h1>
-                <p>En Nuviria transformamos ideas que cuentan historias, generan impacto y ayudan a que tu marca destaque desde el primer momento.</p>
-                <!-- FIX: comilla extra removida -->
-                <a class="cta-button" href="#contacto">Contanos tu idea</a>
-              </div>
-            </div>
+<div class="nav-overlay"></div>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide slide-1">
+        <div class="hero-inner">
+          <div class="hero-deck">
+            <h1>Hacemos tus ideas realidad</h1>
+            <p>En Nuviria transformamos ideas que cuentan historias y generan impacto.</p>
+            <a class="cta-button" href="#contacto">Contanos tu idea</a>
           </div>
+        </div>
+      </div>
 
-          <!-- CARD-2 -->
-          <div class="swiper-slide slide-2">
-            <div class="hero-inner">
-              <div class="hero-deck">
-                <h1>Hacemos tus ideas realidad</h1>
-                <p>En Nuviria transformamos ideas que cuentan historias, generan impacto y ayudan a que tu marca destaque desde el primer momento.</p>
-                <a class="cta-button" href="#contacto">Contanos tu idea</a>
-              </div>
-            </div>
+      <div class="swiper-slide slide-2">
+        <div class="hero-inner">
+          <div class="hero-deck">
+            <h1>Ideas que comunican</h1>
+            <p>Producciones audiovisuales pensadas para tu marca.</p>
+            <a class="cta-button" href="#contacto">Contanos tu idea</a>
           </div>
-
-          <!-- CARD-3 -->
-          <div class="swiper-slide slide-3">
-            <div class="hero-inner">
-              <div class="hero-deck">
-                <h1>Hacemos tus ideas realidad</h1>
-                <p>En Nuviria transformamos ideas que cuentan historias, generan impacto y ayudan a que tu marca destaque desde el primer momento.</p>
-                <a class="cta-button" href="#contacto">Contanos tu idea</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- CARD-4 -->
-          <div class="swiper-slide slide-4">
-            <div class="hero-inner">
-              <div class="hero-deck">
-                <h1>Hacemos tus ideas realidad</h1>
-                <p>En Nuviria transformamos ideas que cuentan historias, generan impacto y ayudan a que tu marca destaque desde el primer momento.</p>
-                <a class="cta-button" href="#contacto">Contanos tu idea</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </section>
-    <!-- HERO-END -->
-
-    <!-- NOSOTROS -->
-    <section id="nosotros" class="about">
-      <div class="about-inner">
-        <div class="about-left">
-          <h2>Acerca de <span>Nosotros</span></h2>
-          <p>
-            En Nuviria Studio, somos un equipo apasionado por transformar ideas en experiencias visuales impactantes. Nos especializamos en la creación de contenido multimedia, desde videos promocionales hasta animaciones personalizadas.
-            <br><br>
-            Trabajamos de cerca con nuestros clientes para entender sus necesidades y ofrecer soluciones que conecten con su audiencia, siempre buscando superar expectativas y dejar una huella única.
-          </p>
-        </div>
-
-        <div class="about-right">
-          <img src="./image/corporate.webp" alt="Equipo de trabajo" loading="lazy" decoding="async" />
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICIOS -->
-    <section id="servicios" class="services">
-      <div class="services-inner">
-        <header class="services-header">
-          <h2>Nuestros <span>Servicios</span></h2>
-        </header>
-
-        <div class="services-grid">
-          <article class="service-card">
-            <img src="./image/svg/video.png" class="service-card-img" alt="Video promocional" loading="lazy" decoding="async" />
-            <h3>Video promocional</h3>
-            <p>Capturamos la esencia de tu marca en 30 segundos.</p>
-          </article>
-
-          <article class="service-card">
-            <img src="./image/svg/edit.png" class="service-card-img" alt="Edicion de video" loading="lazy" decoding="async" />
-            <h3>Edición de Video</h3>
-            <p>Transformamos tus clips en contenido profesional.</p>
-          </article>
-
-          <article class="service-card">
-            <img src="./image/svg/animation-bounce.png" class="service-card-img" alt="Animaciones" loading="lazy" decoding="async" />
-            <h3>Animaciones</h3>
-            <p>Dale vida a tus ideas con motion graphics.</p>
-          </article>
-
-          <article class="service-card">
-            <img src="./image/svg/waveform.png" class="service-card-img" alt="Edicion de audio" loading="lazy" decoding="async" />
-            <h3>Edición de Audio</h3>
-            <p>Mejoramos tu audio, voz o música para que suene profesional.</p>
-          </article>
-
-          <article class="service-card">
-            <img src="./image/svg/airplay.png" class="service-card-img" alt="Asesoria y streaming" loading="lazy" decoding="async" />
-            <h3>Asesoría y Streaming</h3>
-            <p>Te guiamos en la optimización de tus streamings.</p>
-          </article>
-
-          <article class="service-card">
-            <img src="./image/svg/strategy.png" class="service-card-img" alt="Estrategia digital" loading="lazy" decoding="async" />
-            <h3>Estrategia digital</h3>
-            <p>
-              Análisis, planificación y dirección creativa para alinear tu marca,
-              contenidos y objetivos comerciales en un mismo eje estratégico.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- PORTAFOLIO -->
-    <section id="portafolio" class="portfolio">
-      <div class="portfolio-inner">
-        <header class="portfolio-header">
-          <h2>Nuestro <span>Portafolio</span></h2>
-        </header>
-
-        <div class="portfolio-grid">
-          <article class="portfolio-item">
-            <img src="./image/projects/aurora.png" alt="Proyecto 1" loading="lazy" decoding="async" />
-            <div class="portfolio-overlay">
-              <h3>Proyecto Aurora</h3>
-              <p>Producción audiovisual y motion graphics.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item">
-            <img src="./image/projects/neo-corp.jpg" alt="Proyecto 2" loading="lazy" decoding="async" />
-            <div class="portfolio-overlay">
-              <h3>NeoCorp</h3>
-              <p>Identidad visual y desarrollo web.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item">
-            <img src="./image/projects/frame-studio.jpg" alt="Proyecto 3" loading="lazy" decoding="async" />
-            <div class="portfolio-overlay">
-              <h3>Frame Studio</h3>
-              <p>Animación 2D y piezas digitales.</p>
-            </div>
-          </article>
-
-          <article class="portfolio-item">
-            <img src="./image/projects/delta-media.png" alt="Proyecto 4" loading="lazy" decoding="async" />
-            <div class="portfolio-overlay">
-              <h3>Delta Media</h3>
-              <p>Branding y estrategia digital.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACTO -->
-    <section id="contacto" class="contact">
-      <div class="contact-inner">
-        <div class="contact-left">
-          <h2>Hablemos de tu <span>Proyecto</span></h2>
-          <p>
-            Si necesitás más información, una propuesta a medida o atención específica
-            para tu idea, completá el formulario y nos pondremos en contacto a la brevedad.
-          </p>
-        </div>
-
-        <div class="contact-right">
-          <form class="contact-form" action="https://formspree.io/f/mjggvowv" method="POST">
-            <div class="form-group">
-              <label for="name">Nombre</label>
-              <input type="text" id="name" name="name" placeholder="Tu nombre" required />
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="tuemail@dominio.com" required />
-            </div>
-
-            <div class="form-group">
-              <label for="message">Mensaje</label>
-              <textarea id="message" name="message" placeholder="Contanos más sobre tu idea..." required></textarea>
-            </div>
-
-            <button type="submit" class="form-button">Enviar mensaje</button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <div class="footer-left">
-          <div class="brand">
-            <img src="./image/nuviria-logo-dark.png" alt="Logo de la marca" class="footer-logo" loading="lazy" decoding="async" />
-            <span class="logo-text">nuviria</span>
-          </div>
-          <p>
-            Creamos soluciones audiovisuales y digitales
-            con foco en diseño, estrategia y tecnología.
-          </p>
-        </div>
-
-        <div class="footer-right">
-          <ul class="footer-nav">
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-          </ul>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <span>Copyright © Nuviria Studio 2026. Todos los derechos reservados.</span>
-      </div>
-    </footer>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
 
-  </main>
+</main>
 
-  <!-- SCRIPTS -->
-  <script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<!-- SCRIPTS -->
+<script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      // SWIPER
-      const swiper = new Swiper(".mySwiper", {
-        loop: true,
-        speed: 800,
-        spaceBetween: 30,
-        centeredSlides: true,
-        preloadImages: false,
-        lazy: true,
-        autoplay: { delay: 4500, disableOnInteraction: false },
-        pagination: { el: ".swiper-pagination", clickable: true },
-      });
+<script defer>
+document.addEventListener("DOMContentLoaded", () => {
 
-      // NAV DRAWER (MOBILE)
-      const toggle = document.querySelector(".nav-toggle");
-      const drawer = document.querySelector(".nav-drawer");
-      const overlay = document.querySelector(".nav-overlay");
-      const links = document.querySelectorAll(".nav-drawer .nav-list a");
+  new Swiper(".mySwiper", {
+    loop: true,
+    speed: 800,
+    autoplay: { delay: 4500 },
+    pagination: { el: ".swiper-pagination", clickable: true }
+  });
 
-      const openMenu = () => {
-        drawer.classList.add("open");
-        overlay.classList.add("active");
-        document.body.classList.add("nav-open");
-        toggle.setAttribute("aria-expanded", "true");
-        toggle.innerHTML = "<i class='bx bx-x'></i>";
-      };
+  const toggle = document.querySelector(".nav-toggle");
+  const drawer = document.querySelector(".nav-drawer");
+  const overlay = document.querySelector(".nav-overlay");
 
-      const closeMenu = () => {
-        drawer.classList.remove("open");
-        overlay.classList.remove("active");
-        document.body.classList.remove("nav-open");
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.innerHTML = "<i class='bx bx-menu'></i>";
-      };
+  toggle.addEventListener("click", () => {
+    drawer.classList.toggle("open");
+    overlay.classList.toggle("active");
+    document.body.classList.toggle("nav-open");
+    toggle.innerHTML = drawer.classList.contains("open")
+      ? "<i class='bx bx-x'></i>"
+      : "<i class='bx bx-menu'></i>";
+  });
 
-      toggle?.addEventListener("click", () => {
-        drawer.classList.contains("open") ? closeMenu() : openMenu();
-      });
+  overlay.addEventListener("click", () => {
+    drawer.classList.remove("open");
+    overlay.classList.remove("active");
+    document.body.classList.remove("nav-open");
+    toggle.innerHTML = "<i class='bx bx-menu'></i>";
+  });
 
-      overlay?.addEventListener("click", closeMenu);
-      links.forEach(a => a.addEventListener("click", closeMenu));
-
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && drawer.classList.contains("open")) closeMenu();
-      });
-    });
-  </script>
+});
+</script>
 
 </body>
 </html>

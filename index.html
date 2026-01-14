@@ -12,13 +12,9 @@
 
   <!-- Optimización CDNs -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="preconnect" href="https://cdn.boxicons.com" crossorigin>
 
   <!-- Estilos -->
   <link rel="stylesheet" href="./style.css">
-
-  <!-- Iconos -->
-  <link href="https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css" rel="stylesheet">
 
   <!-- Swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
@@ -26,116 +22,168 @@
 
 <body>
 
-<!-- HEADER -->
-<header class="site-header">
-  <div class="header-inner">
-
-    <div class="logo-container">
-      <a href="#">
-        <img src="./image/nuviria-logo-dark.png" alt="Nuviria">
-        <span class="logo-text">nuviria</span>
-      </a>
-    </div>
-
-    <!-- Botón mobile -->
-    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
-      <i class="bx bx-menu"></i>
-    </button>
-
-  </div>
-</header>
-
-<!-- NAV DESKTOP -->
-<nav class="navbar">
-  <ul class="nav-list">
-    <li><a href="#">Inicio</a></li>
-    <li><a href="#nosotros">Nosotros</a></li>
-    <li><a href="#servicios">Servicios</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-  </ul>
-</nav>
-
-<!-- NAV MOBILE (DRAWER) -->
-<nav class="nav-drawer">
-  <ul class="nav-list">
-    <li><a href="#">Inicio</a></li>
-    <li><a href="#nosotros">Nosotros</a></li>
-    <li><a href="#servicios">Servicios</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-  </ul>
-</nav>
-
-<div class="nav-overlay"></div>
-
-<main>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-
-      <div class="swiper-slide slide-1">
-        <div class="hero-inner">
-          <div class="hero-deck">
-            <h1>Hacemos tus ideas realidad</h1>
-            <p>En Nuviria transformamos ideas que cuentan historias y generan impacto.</p>
-            <a class="cta-button" href="#contacto">Contanos tu idea</a>
-          </div>
-        </div>
+  <!-- HEADER + NAV (MISMO BLOQUE) -->
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <div class="logo-container">
+        <a href="#top" aria-label="Ir al inicio">
+          <img src="./image/nuviria-logo-dark.png" alt="Nuviria">
+          <span class="logo-text">nuviria</span>
+        </a>
       </div>
 
-      <div class="swiper-slide slide-2">
-        <div class="hero-inner">
-          <div class="hero-deck">
-            <h1>Ideas que comunican</h1>
-            <p>Producciones audiovisuales pensadas para tu marca.</p>
-            <a class="cta-button" href="#contacto">Contanos tu idea</a>
+      <!-- NAV (una sola línea, también en mobile) -->
+      <nav class="navbar" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="#top">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide slide-1">
+            <div class="hero-inner">
+              <div class="hero-deck">
+                <h1>Hacemos tus ideas realidad</h1>
+                <p>En Nuviria transformamos ideas que cuentan historias y generan impacto.</p>
+                <a class="cta-button" href="#contacto">Contanos tu idea</a>
+              </div>
+            </div>
           </div>
+
+          <div class="swiper-slide slide-2">
+            <div class="hero-inner">
+              <div class="hero-deck">
+                <h1>Ideas que comunican</h1>
+                <p>Producciones audiovisuales pensadas para tu marca.</p>
+                <a class="cta-button" href="#contacto">Contanos tu idea</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="about">
+      <div class="about-inner">
+        <div class="about-left">
+          <h2>Acerca de <span>Nosotros</span></h2>
+          <p>
+            En Nuviria Studio, somos un equipo apasionado por transformar ideas en experiencias visuales impactantes.
+            <br><br>
+            Trabajamos de cerca con nuestros clientes para entender sus necesidades y ofrecer soluciones que conecten con su audiencia.
+          </p>
+        </div>
+        <div class="about-right">
+          <img src="./image/corporate.webp" alt="Equipo de trabajo" loading="lazy" decoding="async">
         </div>
       </div>
+    </section>
 
-    </div>
-    <div class="swiper-pagination"></div>
-  </div>
-</section>
+    <!-- SERVICIOS -->
+    <section id="servicios" class="services">
+      <div class="services-inner">
+        <header class="services-header">
+          <h2>Nuestros <span>Servicios</span></h2>
+        </header>
 
-</main>
+        <div class="services-grid">
+          <article class="service-card">
+            <img src="./image/svg/video.png" class="service-card-img" alt="Video promocional" loading="lazy" decoding="async">
+            <h3>Video promocional</h3>
+            <p>Capturamos la esencia de tu marca en 30 segundos.</p>
+          </article>
 
-<!-- SCRIPTS -->
-<script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+          <article class="service-card">
+            <img src="./image/svg/edit.png" class="service-card-img" alt="Edición de video" loading="lazy" decoding="async">
+            <h3>Edición de Video</h3>
+            <p>Transformamos tus clips en contenido profesional.</p>
+          </article>
 
-<script defer>
-document.addEventListener("DOMContentLoaded", () => {
+          <article class="service-card">
+            <img src="./image/svg/animation-bounce.png" class="service-card-img" alt="Animaciones" loading="lazy" decoding="async">
+            <h3>Animaciones</h3>
+            <p>Dale vida a tus ideas con motion graphics.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  new Swiper(".mySwiper", {
-    loop: true,
-    speed: 800,
-    autoplay: { delay: 4500 },
-    pagination: { el: ".swiper-pagination", clickable: true }
-  });
+    <!-- CONTACTO -->
+    <section id="contacto" class="contact">
+      <div class="contact-inner">
+        <div class="contact-left">
+          <h2>Hablemos de tu <span>Proyecto</span></h2>
+          <p>Completá el formulario y nos pondremos en contacto a la brevedad.</p>
+        </div>
 
-  const toggle = document.querySelector(".nav-toggle");
-  const drawer = document.querySelector(".nav-drawer");
-  const overlay = document.querySelector(".nav-overlay");
+        <div class="contact-right">
+          <form class="contact-form" action="https://formspree.io/f/mjggvowv" method="POST">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+            </div>
 
-  toggle.addEventListener("click", () => {
-    drawer.classList.toggle("open");
-    overlay.classList.toggle("active");
-    document.body.classList.toggle("nav-open");
-    toggle.innerHTML = drawer.classList.contains("open")
-      ? "<i class='bx bx-x'></i>"
-      : "<i class='bx bx-menu'></i>";
-  });
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="tuemail@dominio.com" required>
+            </div>
 
-  overlay.addEventListener("click", () => {
-    drawer.classList.remove("open");
-    overlay.classList.remove("active");
-    document.body.classList.remove("nav-open");
-    toggle.innerHTML = "<i class='bx bx-menu'></i>";
-  });
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea id="message" name="message" placeholder="Contanos más sobre tu idea..." required></textarea>
+            </div>
 
-});
-</script>
+            <button type="submit" class="form-button">Enviar mensaje</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SCRIPTS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // SWIPER
+      new Swiper(".mySwiper", {
+        loop: true,
+        speed: 800,
+        autoplay: { delay: 4500, disableOnInteraction: false },
+        pagination: { el: ".swiper-pagination", clickable: true }
+      });
+
+      // OCULTAR NAV AL SCROLLEAR (mobile + desktop si querés, lo limitamos con CSS)
+      const header = document.querySelector(".site-header");
+      let lastY = window.scrollY;
+
+      window.addEventListener("scroll", () => {
+        const y = window.scrollY;
+        const goingDown = y > lastY;
+
+        // umbral para evitar parpadeo
+        if (y > 60 && goingDown) header.classList.add("nav-hidden");
+        else header.classList.remove("nav-hidden");
+
+        lastY = y;
+      }, { passive: true });
+    });
+  </script>
 
 </body>
 </html>
+

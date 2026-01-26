@@ -1,13 +1,49 @@
 /* =====================
    RESET + BASE
 ===================== */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+
+/* =====================
+   WHATSAPP FLOATING BUTTON (FIX)
+   Pegar ARRIBA para evitar que lo "tapen" @media rotos (color fix)
+===================== */
+
+.wa-float{
+  position: fixed !important;
+  right: 18px;
+  bottom: 18px;
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  background: #25D366;
+  display: grid;
+  place-items: center;
+  z-index: 9999;
+  box-shadow: 0 12px 30px rgba(0,0,0,.25);
+  text-decoration: none;
+
+  /* ✅ CLAVE: esto hace que currentColor sea blanco */
+  color: #ffffff !important;
 }
+
+.wa-float:visited{
+  /* ✅ evita que “visited” lo ponga violeta */
+  color: #ffffff !important;
+}
+
+.wa-icon{
+  width: 28px !important;
+  height: 28px !important;
+  display: block;
+
+  /* opcional, pero ayuda a que currentColor sea blanco siempre */
+  color: #ffffff !important;
+}
+
+/* backup por si algún estilo raro pisa el path */
+.wa-icon path{
+  fill: currentColor !important;
+}
+
 
 /* ✅ Anti “logo gigante” y anti sorpresas */
 img {
@@ -711,4 +747,13 @@ body {
     height: 48px;
     margin-right: 12px; /* gap */
   }
+  
+  /* Fuerza el ícono de WhatsApp a blanco aunque haya estilos heredados */
+	.whatsapp-float svg,
+	.whatsapp-float svg * {
+	fill: #ffffff !important;
+	stroke: #ffffff !important;
+	color: #ffffff !important;
+	}
+
 }
